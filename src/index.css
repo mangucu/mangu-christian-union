@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mang'u Christian Union Design System - Spiritual & Modern */
+
+@layer base {
+  :root {
+    /* Core spiritual color palette */
+    --background: 60 100% 98%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    /* Spiritual primary - Vibrant Yellow */
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 5%;
+    --primary-light: 60 100% 60%;
+
+    /* Deep Black accents */
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 60 100% 98%;
+    --secondary-light: 0 0% 20%;
+
+    /* Peaceful muted tones */
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    /* Bright accent */
+    --accent: 40 100% 60%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 80%;
+    --input: 0 0% 95%;
+    --ring: 60 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Spiritual gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 50%, hsl(var(--secondary)) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8) 0%, hsl(0 0% 95% / 0.9) 100%);
+
+    /* Sacred shadows */
+    --shadow-spiritual: 0 10px 40px hsl(var(--primary) / 0.15);
+    --shadow-gentle: 0 4px 20px hsl(var(--primary) / 0.08);
+    --shadow-golden: 0 8px 30px hsl(var(--secondary) / 0.25);
+
+    /* Smooth transitions */
+    --transition-spiritual: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 60 100% 90%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 60 100% 90%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 60 100% 90%;
+
+    --primary: 60 100% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 60 100% 90%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 40 100% 70%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 60 100% 90%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 10%;
+    --ring: 60 100% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-section {
+    background: var(--gradient-section);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-spiritual {
+    box-shadow: var(--shadow-spiritual);
+  }
+
+  .shadow-gentle {
+    box-shadow: var(--shadow-gentle);
+  }
+
+  .shadow-golden {
+    box-shadow: var(--shadow-golden);
+  }
+
+  .transition-spiritual {
+    transition: var(--transition-spiritual);
+  }
+}
